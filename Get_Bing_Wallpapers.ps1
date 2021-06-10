@@ -1,8 +1,15 @@
 ﻿#---------------------------------------------
-# Get_Bing_Wallpaper.ps1 
-# Download Bing Wallpapers in resolution 1920x1080 (16:9) and 1920x1200 (16:10) 
-# Created by Borcon
+# Get_Bing_Wallpapers.ps1 
+# Download Bing Wallpapers in resolution 1920x1080 (16:9) and 1920x1200 (16:10)
+#
+# Copyright (c) 2021 Borcon
+# License: MIT license
 #---------------------------------------------
+
+Param(
+    # Destination folder to download the wallpapers to
+    [string]$downloadFolder = "$([Environment]::GetFolderPath("MyPictures"))\Wallpapers\Bing"
+)
 
 # Use the Bing.com API. 
 # The idx parameter determines the day: 0 is the current day, 1 is the previous day, etc. This goes back for max. 7 days. 
@@ -10,7 +17,6 @@
 # The mkt parameter defines the culture, like en-US, de-DE, etc.
 $url                = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
 $idx                = "7"
-$downloadBaseFolder = "$([Environment]::GetFolderPath("MyPictures"))\Wallpapers\Bing"
 
 # Check if download folders exists and otherwise create it
 $downloadFolder_1920x1080 = $downloadBaseFolder+"\1920x1080\"
