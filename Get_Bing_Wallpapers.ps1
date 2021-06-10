@@ -6,7 +6,7 @@
 # License: MIT license
 #---------------------------------------------
 
-Param(
+Param (
     # Destination folder to download the wallpapers to
     [string]$downloadFolder = "$([Environment]::GetFolderPath("MyPictures"))\Wallpapers\Bing"
 )
@@ -19,10 +19,10 @@ $url                = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&
 $idx                = "7"
 
 # Check if download folders exists and otherwise create it
-$downloadFolder_1920x1080 = $downloadBaseFolder+"\1920x1080\"
-$downloadFolder_1920x1200 = $downloadBaseFolder+"\1920x1200\"
-if (!(Test-Path $downloadBaseFolder)) {
-    New-Item -ItemType Directory $downloadBaseFolder
+$downloadFolder_1920x1080 = $downloadFolder+"\1920x1080\"
+$downloadFolder_1920x1200 = $downloadFolder+"\1920x1200\"
+if (!(Test-Path $downloadFolder)) {
+    New-Item -ItemType Directory $downloadFolder
 }
 if (!(Test-Path $downloadFolder_1920x1080)) {
     New-Item -ItemType Directory $downloadFolder_1920x1080
