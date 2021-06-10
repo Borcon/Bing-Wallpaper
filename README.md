@@ -1,7 +1,7 @@
 # Bing-Wallpaper
 
 ## Description
-Download the last 6 Bing wallpapers in resolution 1920x1080 and 1920x1200
+Download the last 7 Bing wallpapers in resolution 1920x1080 and 1920x1200
 
 Optional Parameters
 --------------
