@@ -16,5 +16,5 @@ Optional Parameters
 
 ## Command
 ```powershell
-powershell.exe -ExecutionPolicy Unrestricted -WindowStyle Hidden -file "<path to the script>" <optional parameters>
+powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -file "<path to the script>" <optional parameters>
 ```
